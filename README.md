@@ -121,7 +121,7 @@ You can find lazy offer URLs inside the `GET /offers` response. They have to be 
 
 ```
 
-GET https://api.annecy.media/offers/lazy?hash={hash}&country={country}&locale={locale}&platform={platform}&advertiser_id={advertiser_id}&ip={ip}&user_id={user_id}&lazy_ids%5B0%5D={lazy_ids}
+GET https://api.annecy.media/offers/lazy?hash={hash}&country={country}&locale={locale}&platform={platform}&advertiser_id={advertiser_id}&ip={ip}&user_id={user_id}&lazy_ids[]={lazy_id_1}&lazy_ids[]={lazy_id_2}
 
 Headers
     Authorization: Bearer 7478AF4B-649F-4843-AC3E-84CE7CC0739D
