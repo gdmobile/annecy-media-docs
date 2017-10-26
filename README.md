@@ -20,7 +20,7 @@ Returns a list of all available and active offers for your Publisher. The respon
 
 ```
 
-GET http://api.annecy.media/offers?country={country}&locale={locale}&platform={platform}&advertiser_id={advertiser_id}&ip={ip}&user_id={user_id}
+GET https://api.annecy.media/offers?country={country}&locale={locale}&platform={platform}&advertiser_id={advertiser_id}&ip={ip}&user_id={user_id}
 
 Headers
     Authorization: Bearer 7478AF4B-649F-4843-AC3E-84CE7CC0739D
@@ -46,7 +46,7 @@ Headers
                 "cta_text": "1.) Install the app\n2.) Open the app",
                 "credits": 300,
                 "cost_type": "cpi",
-                "tracking_url": "http:\/\/api.annecy.media\/redirect?redirect=https%3A\/\/example.com",
+                "tracking_url": "https:\/\/api.annecy.media\/redirect?redirect=https%3A\/\/example.com",
                 "attributes": {
                     "border": "red",
                     "hint": "Deal of the day"
@@ -62,12 +62,12 @@ Headers
                 "cta_text": "1.) Install the app\n2.) Open the app",
                 "credits": 200,
                 "cost_type": "cpi",
-                "tracking_url": "http:\/\/api.annecy.media\/redirect?redirect=REPLACE_TRACKING_URL&hash=GBlR3Q06bY9pWROCRs3ClRyKrwoLzEXJ"
+                "tracking_url": "https:\/\/api.annecy.media\/redirect?redirect=REPLACE_TRACKING_URL&hash=GBlR3Q06bY9pWROCRs3ClRyKrwoLzEXJ"
             }
         ],
         "request_id": "EWA1xGV",
         "lazy_calls": [
-            "http:\/\/api.annecy.media\/offers\/lazy?hash=ZAqzoM0VYjL5QwCWC6CZ0yGlEO4R7wnx&country=DE&locale=de&platform=ios&user_id=b38fc80decac0523c2e690ea6311aa2f&advertiser_id=8f69a791-4b56-465e-a94e-ac3896a06b13&lazy_ids%5B0%5D=f29d5cc22cbb9eef3e9e531c6c5001c1"
+            "https:\/\/api.annecy.media\/offers\/lazy?hash=ZAqzoM0VYjL5QwCWC6CZ0yGlEO4R7wnx&country=DE&locale=de&platform=ios&user_id=b38fc80decac0523c2e690ea6311aa2f&advertiser_id=8f69a791-4b56-465e-a94e-ac3896a06b13&lazy_ids%5B0%5D=f29d5cc22cbb9eef3e9e531c6c5001c1"
         ]
     }
 }
@@ -121,7 +121,7 @@ You can find lazy offer URLs inside the `GET /offers` response. They have to be 
 
 ```
 
-GET http://api.annecy.media/offers/lazy?hash={hash}&country={country}&locale={locale}&platform={platform}&advertiser_id={advertiser_id}&ip={ip}&user_id={user_id}&lazy_ids%5B0%5D={lazy_ids}
+GET https://api.annecy.media/offers/lazy?hash={hash}&country={country}&locale={locale}&platform={platform}&advertiser_id={advertiser_id}&ip={ip}&user_id={user_id}&lazy_ids%5B0%5D={lazy_ids}
 
 Headers
     Authorization: Bearer 7478AF4B-649F-4843-AC3E-84CE7CC0739D
@@ -187,7 +187,7 @@ Views are used to calculate the performance for your offers. In every `GET /offe
 
 ```
 
-POST http://api.annecy.media/views
+POST https://api.annecy.media/views
 
 Headers
     Authorization: Bearer 7478AF4B-649F-4843-AC3E-84CE7CC0739D
