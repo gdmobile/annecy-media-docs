@@ -115,7 +115,7 @@ You can find lazy offer URLs inside the `GET /offers` response. They have to be 
 | advertiser\_id | `string` | ID for Advertisers (IDFA, GAID) |
 | ip             | `string` | IP address of the requesting device |
 | user\_id       | `string` | User ID of your user |
-| lazy\_ids      | `string` | List of IDs from the lazy offers
+| lazy\_ids[]    | `string` | List of IDs from the lazy offers
 
 #### Request
 
