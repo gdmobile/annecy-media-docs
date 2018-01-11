@@ -1,5 +1,7 @@
 # Annecy Media API
 
+Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
+
 ## Get Offers
 
 Returns a list of all available and active offers for your Publisher. The response contains static offers **and** lazy offers. The lazy offers have two additional fields (`lazy<boolean>` and `lazy_id<id>`). If there are any lazy offers in the response, then you have to call the URL we've sent you in `lazy_calls` response.
