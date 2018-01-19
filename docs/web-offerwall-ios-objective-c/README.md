@@ -7,14 +7,6 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
 You can get your custom web offerwall URL [here](https://admin.annecy.media/offerwall). Create a WebView and make sure that clicked offers will open in Safari!
 
 ``` objective-c
-//
-//  ViewController.m
-//  annecy-web-offerwall-objective-c
-//
-//  Created by Tobias Schultka on 19.01.18.
-//  Copyright © 2018 GD Mobile GmbH. All rights reserved.
-//
-
 #import "ViewController.h"
 @import AdSupport;
 
