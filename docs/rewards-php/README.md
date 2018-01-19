@@ -16,14 +16,14 @@ https://api.your-company.com/reward?user_id=foo&credits=100&campaign_title=bar&s
 
 Then we extract all query params:
 
-```
+``` php
 $query_string = parse_url($url, PHP_URL_QUERY);
 parse_str($query_string, $query_params);
 ```
 
 $query_params will look like this:
 
-```
+``` php
 [
     "user_id" => "foo",
     "credits" => "100",
@@ -34,7 +34,7 @@ $query_params will look like this:
 
 Then we have to sort the $query_params by key, remove the signature param, and build an HTTP query:
 
-```
+``` php
 ksort($query_params);
 $signature = $query_params["signature"];
 unset($query_params["signature"]);
@@ -43,13 +43,13 @@ $query_string = http_build_query($query_params);
 
 $query_string will now look like this:
 
-```
+``` php
 "campaign_title=bar&credits=100&user_id=foo"
 ```
 
 Then we have to hash the $query_string with your secret. If the result is the same like signature, then it's a valid reward:
 
-```
+``` php
 $hashed_signature = hash_hmac("sha1", $query_string, "YourSecret");
 if ($hashed_signature == $signature) {
     // Success
