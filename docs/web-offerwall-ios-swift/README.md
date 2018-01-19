@@ -2,9 +2,9 @@
 
 Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
 
-## Demo
+## Sample
 
-Check out our [Demo](https://github.com/gdmobile/annecy-media-api/tree/master/docs/web-offerwall-ios-swift/demo)!
+Check out our [Sample Project](https://github.com/gdmobile/annecy-media-api/tree/master/docs/web-offerwall-ios-swift/sample)!
 
 ## Example
 
