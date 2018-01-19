@@ -4,7 +4,7 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
 
 ## Sample
 
-Check out our [Sample Project](https://github.com/gdmobile/annecy-media-api/tree/master/docs/web-offerwall-browser/sample/index.html)!
+Check out our [Sample Project](https://github.com/gdmobile/annecy-media-api/tree/master/web-offerwall-browser/sample/index.html)!
 
 ## Example
 
