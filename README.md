@@ -8,7 +8,7 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
   * [iOS Swift](https://github.com/gdmobile/annecy-media-api/tree/master/docs/web-offerwall-ios-swift)
   * iOS Objective-C (coming soon)
   * Android (coming soon)
-  * Browser (coming soon)
+  * [Browser](https://github.com/gdmobile/annecy-media-api/tree/master/docs/web-offerwall-browser)
 * Native Offerwall
   * iOS Swift (coming soon)
   * iOS Objective-C (coming soon)

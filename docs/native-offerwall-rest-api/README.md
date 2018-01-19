@@ -102,8 +102,8 @@ You can find lazy offer URLs inside the `GET /offers` response. They have to be 
 | Parameter      | Type     | Notes |
 | -------------- | -------- | ----- |
 | hash           | `string` | Signature hash |
-| country        | `string` | Country (specified in ISO 3166, two letter countries) |
-| locale         | `string` | Locale for selecting the translations (ISO 639-1, two letter locales) |
+| country        | `string` | Country - ISO 3166 (`US`, `GB`, `DE`) |
+| locale         | `string` | Language - ISO 639-1 (`en`, `es`, `de`) |
 | platform       | `string` | Platform of the requesting device (`ios`, `android`) |
 | advertiser\_id | `string` | ID for Advertisers (IDFA, GAID) |
 | ip             | `string` | IP address of the requesting device |
@@ -113,13 +113,11 @@ You can find lazy offer URLs inside the `GET /offers` response. They have to be 
 #### Request
 
 ```
-
 GET https://api.annecy.media/offers/lazy?hash={hash}&country={country}&locale={locale}&platform={platform}&advertiser_id={advertiser_id}&ip={ip}&user_id={user_id}&lazy_ids[]={lazy_id_1}&lazy_ids[]={lazy_id_2}
 
 Headers
     Authorization: Bearer 7478AF4B-649F-4843-AC3E-84CE7CC0739D
     API-Version: 1.0
-
 ```
 
 #### Response
