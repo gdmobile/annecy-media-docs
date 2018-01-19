@@ -40,6 +40,8 @@
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+
+    // Open offers in Safari
     if (navigationType == UIWebViewNavigationTypeLinkClicked ) {
         UIApplication *application = [UIApplication sharedApplication];
         [application openURL:[request URL] options:@{} completionHandler:nil];
