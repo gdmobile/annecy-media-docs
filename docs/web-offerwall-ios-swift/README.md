@@ -4,7 +4,7 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
 
 ## Example
 
-You can get your custom web offerwall [here](https://admin.annecy.media/offerwall). Create a WebView and make sure that clicked offers will open in Safari!
+You can get your custom web offerwall URL [here](https://admin.annecy.media/offerwall). Create a WebView and make sure that clicked offers will open in Safari!
 
 ``` swift
 import UIKit
