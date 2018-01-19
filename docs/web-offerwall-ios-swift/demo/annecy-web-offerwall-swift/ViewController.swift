@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
         let USER_ID = "foo"
 
         // Get user settings
-        let country = Locale.current.regionCode ?? "US"
+        let country = Locale.current.regionCode ?? ""
         let language = Locale.preferredLanguages[0]
         let idfa = ASIdentifierManager.shared().isAdvertisingTrackingEnabled
             ? ASIdentifierManager.shared().advertisingIdentifier.uuidString
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
         let annecyURLRequest:URLRequest = URLRequest(url: annecyURL!)
         annecyWebView.loadRequest(annecyURLRequest)
     }
-    
+
     public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
 
         // Open offers in Safari

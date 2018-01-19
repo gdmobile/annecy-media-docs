@@ -4,14 +4,14 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
 
 ## Get Offers
 
-Returns a list of all available and active offers for your Publisher. The response contains static offers **and** lazy offers. The lazy offers have two additional fields (`lazy<boolean>` and `lazy_id<id>`). If there are any lazy offers in the response, then you have to call the URL we've sent you in `lazy_calls` response.
+Returns a list of all available and active offers for your Publisher. The response contains static offers **and** lazy offers. The lazy offers have two additional fields (`lazy<boolean>` and `lazy_id<string>`). If there are any lazy offers in the response, then you have to call the URL we've sent you in `lazy_calls` response.
 
 #### Parameters
 
 | Parameter      | Type     | Notes |
 | -------------- | -------- | ----- |
-| country        | `string` | Country (specified in ISO 3166, two letter countries) |
-| locale         | `string` | Locale for selecting the translations (ISO 639-1, two letter locales) |
+| country        | `string` | Country - ISO 3166 (`US`, `GB`, `DE`) |
+| locale         | `string` | Language - ISO 639-1 (`en`, `es`, `de`) |
 | platform       | `string` | Platform of the requesting device (`ios`, `android`) |
 | advertiser\_id | `string` | ID for Advertisers (IDFA, GAID) |
 | ip             | `string` | IP address of the requesting device |

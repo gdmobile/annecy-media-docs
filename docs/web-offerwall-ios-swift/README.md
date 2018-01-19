@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
         let USER_ID = "foo"
 
         // Get user settings
-        let country = Locale.current.regionCode ?? "US"
+        let country = Locale.current.regionCode ?? ""
         let language = Locale.preferredLanguages[0]
         let idfa = ASIdentifierManager.shared().isAdvertisingTrackingEnabled
             ? ASIdentifierManager.shared().advertisingIdentifier.uuidString
