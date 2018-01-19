@@ -2,6 +2,10 @@
 
 Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
 
+## Demo
+
+Check out our [Demo](https://github.com/gdmobile/annecy-media-api/tree/master/docs/web-offerwall-browser/demo/index.html)!
+
 ## Example
 
 You can get your custom web offerwall URL [here](https://admin.annecy.media/offerwall). Create an iFrame, replace the token, and set the user ID.

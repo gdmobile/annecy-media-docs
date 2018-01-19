@@ -15,3 +15,7 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
   * iOS Swift (coming soon)
   * iOS Objective-C (coming soon)
   * Android (coming soon)
+
+## Rewards
+
+* [Rewards PHP](https://github.com/gdmobile/annecy-media-api/tree/master/docs/rewards-php)
