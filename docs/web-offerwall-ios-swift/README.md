@@ -31,7 +31,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
         self.view.addSubview(annecyWebView)
         annecyWebView.delegate = self
 
-        let annecyURL = URL(string: "https://offerwall.annecy.media?country=\(country)&idfa_gaid=\(idfa)&language=\(language)&token=\(TOKEN)&user_id=\(USER_ID)&platform=ios")
+        let annecyURL = URL(string: "https://offerwall.annecy.media?country=\(country)&language=\(language)&idfa_gaid=\(idfa)&token=\(TOKEN)&user_id=\(USER_ID)&platform=ios")
         let annecyURLRequest:URLRequest = URLRequest(url: annecyURL!)
         annecyWebView.loadRequest(annecyURLRequest)
     }
@@ -40,11 +40,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
         // Open offers in Safari
         if navigationType == .linkClicked {
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(request.url!, options: [:], completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(request.url!)
-            }
+            UIApplication.shared.open(request.url!, options: [:], completionHandler: nil)
 
             return false
         }

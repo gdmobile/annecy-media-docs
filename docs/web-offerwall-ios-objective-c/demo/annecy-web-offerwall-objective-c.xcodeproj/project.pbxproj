@@ -7,25 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E264DADC201264E500C4182E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264DADB201264E500C4182E /* AppDelegate.swift */; };
-		E264DADE201264E500C4182E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264DADD201264E500C4182E /* ViewController.swift */; };
-		E264DAE1201264E500C4182E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E264DADF201264E500C4182E /* Main.storyboard */; };
-		E264DAE3201264E500C4182E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E264DAE2201264E500C4182E /* Assets.xcassets */; };
-		E264DAE6201264E500C4182E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E264DAE4201264E500C4182E /* LaunchScreen.storyboard */; };
+		E2393CBE2012889900EB251D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2393CBD2012889900EB251D /* AppDelegate.m */; };
+		E2393CC12012889900EB251D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2393CC02012889900EB251D /* ViewController.m */; };
+		E2393CC42012889900EB251D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2393CC22012889900EB251D /* Main.storyboard */; };
+		E2393CC62012889900EB251D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2393CC52012889900EB251D /* Assets.xcassets */; };
+		E2393CC92012889900EB251D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2393CC72012889900EB251D /* LaunchScreen.storyboard */; };
+		E2393CCC2012889900EB251D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2393CCB2012889900EB251D /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E264DAD8201264E500C4182E /* annecy-web-offerwall-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "annecy-web-offerwall-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E264DADB201264E500C4182E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E264DADD201264E500C4182E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E264DAE0201264E500C4182E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E264DAE2201264E500C4182E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E264DAE5201264E500C4182E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E264DAE7201264E500C4182E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2393CB92012889900EB251D /* annecy-web-offerwall-objective-c.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "annecy-web-offerwall-objective-c.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2393CBC2012889900EB251D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E2393CBD2012889900EB251D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E2393CBF2012889900EB251D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E2393CC02012889900EB251D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E2393CC32012889900EB251D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2393CC52012889900EB251D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2393CC82012889900EB251D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2393CCA2012889900EB251D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2393CCB2012889900EB251D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E264DAD5201264E500C4182E /* Frameworks */ = {
+		E2393CB62012889900EB251D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,72 +39,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E264DACF201264E500C4182E = {
+		E2393CB02012889900EB251D = {
 			isa = PBXGroup;
 			children = (
-				E264DADA201264E500C4182E /* annecy-web-offerwall-swift */,
-				E264DAD9201264E500C4182E /* Products */,
+				E2393CBB2012889900EB251D /* annecy-web-offerwall-objective-c */,
+				E2393CBA2012889900EB251D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E264DAD9201264E500C4182E /* Products */ = {
+		E2393CBA2012889900EB251D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E264DAD8201264E500C4182E /* annecy-web-offerwall-swift.app */,
+				E2393CB92012889900EB251D /* annecy-web-offerwall-objective-c.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E264DADA201264E500C4182E /* annecy-web-offerwall-swift */ = {
+		E2393CBB2012889900EB251D /* annecy-web-offerwall-objective-c */ = {
 			isa = PBXGroup;
 			children = (
-				E264DADB201264E500C4182E /* AppDelegate.swift */,
-				E264DADD201264E500C4182E /* ViewController.swift */,
-				E264DADF201264E500C4182E /* Main.storyboard */,
-				E264DAE2201264E500C4182E /* Assets.xcassets */,
-				E264DAE4201264E500C4182E /* LaunchScreen.storyboard */,
-				E264DAE7201264E500C4182E /* Info.plist */,
+				E2393CBC2012889900EB251D /* AppDelegate.h */,
+				E2393CBD2012889900EB251D /* AppDelegate.m */,
+				E2393CBF2012889900EB251D /* ViewController.h */,
+				E2393CC02012889900EB251D /* ViewController.m */,
+				E2393CC22012889900EB251D /* Main.storyboard */,
+				E2393CC52012889900EB251D /* Assets.xcassets */,
+				E2393CC72012889900EB251D /* LaunchScreen.storyboard */,
+				E2393CCA2012889900EB251D /* Info.plist */,
+				E2393CCB2012889900EB251D /* main.m */,
 			);
-			path = "annecy-web-offerwall-swift";
+			path = "annecy-web-offerwall-objective-c";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E264DAD7201264E500C4182E /* annecy-web-offerwall-swift */ = {
+		E2393CB82012889900EB251D /* annecy-web-offerwall-objective-c */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E264DAEA201264E500C4182E /* Build configuration list for PBXNativeTarget "annecy-web-offerwall-swift" */;
+			buildConfigurationList = E2393CCF2012889900EB251D /* Build configuration list for PBXNativeTarget "annecy-web-offerwall-objective-c" */;
 			buildPhases = (
-				E264DAD4201264E500C4182E /* Sources */,
-				E264DAD5201264E500C4182E /* Frameworks */,
-				E264DAD6201264E500C4182E /* Resources */,
+				E2393CB52012889900EB251D /* Sources */,
+				E2393CB62012889900EB251D /* Frameworks */,
+				E2393CB72012889900EB251D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "annecy-web-offerwall-swift";
-			productName = "annecy-web-offerwall-swift";
-			productReference = E264DAD8201264E500C4182E /* annecy-web-offerwall-swift.app */;
+			name = "annecy-web-offerwall-objective-c";
+			productName = "annecy-web-offerwall-objective-c";
+			productReference = E2393CB92012889900EB251D /* annecy-web-offerwall-objective-c.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E264DAD0201264E500C4182E /* Project object */ = {
+		E2393CB12012889900EB251D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "GD Mobile GmbH";
 				TargetAttributes = {
-					E264DAD7201264E500C4182E = {
+					E2393CB82012889900EB251D = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = E264DAD3201264E500C4182E /* Build configuration list for PBXProject "annecy-web-offerwall-swift" */;
+			buildConfigurationList = E2393CB42012889900EB251D /* Build configuration list for PBXProject "annecy-web-offerwall-objective-c" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,54 +114,55 @@
 				en,
 				Base,
 			);
-			mainGroup = E264DACF201264E500C4182E;
-			productRefGroup = E264DAD9201264E500C4182E /* Products */;
+			mainGroup = E2393CB02012889900EB251D;
+			productRefGroup = E2393CBA2012889900EB251D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E264DAD7201264E500C4182E /* annecy-web-offerwall-swift */,
+				E2393CB82012889900EB251D /* annecy-web-offerwall-objective-c */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E264DAD6201264E500C4182E /* Resources */ = {
+		E2393CB72012889900EB251D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E264DAE6201264E500C4182E /* LaunchScreen.storyboard in Resources */,
-				E264DAE3201264E500C4182E /* Assets.xcassets in Resources */,
-				E264DAE1201264E500C4182E /* Main.storyboard in Resources */,
+				E2393CC92012889900EB251D /* LaunchScreen.storyboard in Resources */,
+				E2393CC62012889900EB251D /* Assets.xcassets in Resources */,
+				E2393CC42012889900EB251D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E264DAD4201264E500C4182E /* Sources */ = {
+		E2393CB52012889900EB251D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E264DADE201264E500C4182E /* ViewController.swift in Sources */,
-				E264DADC201264E500C4182E /* AppDelegate.swift in Sources */,
+				E2393CC12012889900EB251D /* ViewController.m in Sources */,
+				E2393CCC2012889900EB251D /* main.m in Sources */,
+				E2393CBE2012889900EB251D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E264DADF201264E500C4182E /* Main.storyboard */ = {
+		E2393CC22012889900EB251D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E264DAE0201264E500C4182E /* Base */,
+				E2393CC32012889900EB251D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		E264DAE4201264E500C4182E /* LaunchScreen.storyboard */ = {
+		E2393CC72012889900EB251D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E264DAE5201264E500C4182E /* Base */,
+				E2393CC82012889900EB251D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -163,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E264DAE8201264E500C4182E /* Debug */ = {
+		E2393CCD2012889900EB251D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,12 +222,10 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		E264DAE9201264E500C4182E /* Release */ = {
+		E2393CCE2012889900EB251D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -265,35 +270,32 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		E264DAEB201264E500C4182E /* Debug */ = {
+		E2393CD02012889900EB251D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "annecy-web-offerwall-swift/Info.plist";
+				INFOPLIST_FILE = "annecy-web-offerwall-objective-c/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "media.annecy.annecy-web-offerwall-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "media.annecy.annecy-web-offerwall-objective-c";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		E264DAEC201264E500C4182E /* Release */ = {
+		E2393CD12012889900EB251D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "annecy-web-offerwall-swift/Info.plist";
+				INFOPLIST_FILE = "annecy-web-offerwall-objective-c/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "media.annecy.annecy-web-offerwall-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "media.annecy.annecy-web-offerwall-objective-c";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -301,25 +303,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E264DAD3201264E500C4182E /* Build configuration list for PBXProject "annecy-web-offerwall-swift" */ = {
+		E2393CB42012889900EB251D /* Build configuration list for PBXProject "annecy-web-offerwall-objective-c" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E264DAE8201264E500C4182E /* Debug */,
-				E264DAE9201264E500C4182E /* Release */,
+				E2393CCD2012889900EB251D /* Debug */,
+				E2393CCE2012889900EB251D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E264DAEA201264E500C4182E /* Build configuration list for PBXNativeTarget "annecy-web-offerwall-swift" */ = {
+		E2393CCF2012889900EB251D /* Build configuration list for PBXNativeTarget "annecy-web-offerwall-objective-c" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E264DAEB201264E500C4182E /* Debug */,
-				E264DAEC201264E500C4182E /* Release */,
+				E2393CD02012889900EB251D /* Debug */,
+				E2393CD12012889900EB251D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E264DAD0201264E500C4182E /* Project object */;
+	rootObject = E2393CB12012889900EB251D /* Project object */;
 }
