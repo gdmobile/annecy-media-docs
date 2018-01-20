@@ -6,9 +6,11 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
 
 Check out our [Sample Project](https://github.com/gdmobile/annecy-media-api/tree/master/rewards-php/sample/reward.php)!
 
-## Example
+## PHP Example
 
-Annecy calls the reward URL like this:
+As soon as an advertiser triggered an interaction, Annecy instantly calls your **reward URL**. If your backend responses a 200 HTTP status, then the interaction state will be set to `Rewarded`. If your backend is down, then the interaction state will be set to `Failed` and Annecy tries to send the interaction over and over again. Select your Publisher [here](https://admin.annecy.media/publishers) to set your `Secret`, `Reward URL` and `Algorithm`.
+
+Annecy calls your reward URL like this:
 
 ```
 https://api.your-company.com/reward?user_id=foo&credits=100&campaign_title=bar&signature=218b99be4bb589a6a200e94ac26afee620fe83d6
