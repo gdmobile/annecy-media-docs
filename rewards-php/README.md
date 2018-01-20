@@ -8,7 +8,7 @@ Check out our [Sample Project](https://github.com/gdmobile/annecy-media-api/tree
 
 ## PHP Example
 
-As soon as an advertiser triggered an interaction, Annecy instantly calls your **reward URL**. If your backend responses a 200 HTTP status, then the interaction state will be set to `Rewarded`. If your backend is down, then the interaction state will be set to `Failed` and Annecy tries to send the interaction over and over again. Select your Publisher [here](https://admin.annecy.media/publishers) to set your `Secret`, `Reward URL` and `Algorithm`.
+As soon as an advertiser triggered an interaction, Annecy instantly calls your **reward URL**. If your backend responses a 200 HTTP status, then the interaction state will be set to `Rewarded`. If your backend is down, then the interaction state will be set to `Failed` and Annecy tries to send the interaction over and over again. Select your publisher [here](https://admin.annecy.media/publishers) to set your `Secret`, `Reward URL` and `Algorithm`.
 
 Annecy calls your reward URL like this:
 
@@ -54,6 +54,8 @@ Then we have to hash the `$query_string` with your secret. If the result is the 
 ``` php
 $hashed_signature = hash_hmac("sha1", $query_string, "YourSecret");
 if ($hashed_signature == $signature) {
-    // Success
+    header("HTTP/1.1 200 OK");
+} else {
+    header('HTTP/1.1 403 Forbidden', true, 403);
 }
 ```
