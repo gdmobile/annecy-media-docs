@@ -20,10 +20,8 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
         // Get user settings
         let country = Locale.current.regionCode ?? ""
-        let language = Locale.preferredLanguages[0]
-        let idfa = ASIdentifierManager.shared().isAdvertisingTrackingEnabled
-            ? ASIdentifierManager.shared().advertisingIdentifier.uuidString
-            : ""
+        let language = Locale.preferredLanguages.count == 0 ? "" : Locale.preferredLanguages[0]
+        let idfa = ASIdentifierManager.shared().isAdvertisingTrackingEnabled ? ASIdentifierManager.shared().advertisingIdentifier.uuidString : ""
 
         // Create an Annecy WebWiew
         let annecyWebView:UIWebView = UIWebView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.width, height:UIScreen.main.bounds.height))
