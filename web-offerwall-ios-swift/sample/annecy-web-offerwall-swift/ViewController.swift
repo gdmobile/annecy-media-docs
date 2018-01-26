@@ -38,7 +38,11 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
         // Open offers in Safari
         if navigationType == .linkClicked {
-            UIApplication.shared.open(request.url!, options: [:], completionHandler: nil)
+            guard let url = request.url else { return false }
+
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
 
             return false
         }
