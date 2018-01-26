@@ -11,8 +11,6 @@ Check out our [Sample Project](https://github.com/gdmobile/annecy-media-api/tree
 You can get your custom web offerwall URL [here](https://admin.annecy.media/offerwall). Create a WebView and make sure that clicked offers will open in default browser!
 
 ``` java
-package media.annecy.web_offerwall_android;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
