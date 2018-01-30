@@ -2,6 +2,12 @@
 
 Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
 
+* [Checklist](#checklist)
+* [API](#api)
+    * [Offers](#get-offers)
+    * [Lazy Offers](#get-lazy-offers)
+    * [Views](#send-views)
+
 ## Checklist
 
 * You have an Annecy Media account and token
