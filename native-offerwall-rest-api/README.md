@@ -12,10 +12,10 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
 
 You have to set an `Authorization` and `API-Version` header to all requests. Replace `<token>` with your publisher token from your [Publisher Settings](https://admin.annecy.media/publishers). Do not hash the token!
 
-```
-Authorization: Bearer <token>
-API-Version: 1.0
-```
+| Header        | Value            |
+| ------------- | ---------------- |
+| Authorization | `Bearer <token>` |
+| API-Version   | `1.0`            |
 
 ### Get Offers
 
@@ -225,13 +225,13 @@ Views are used to calculate the performance for your offers. In every `GET /offe
 
 200 (application/json)
 
-```json
+``` json
 []
 ```
 
 400 (application/json)
 
-```json
+``` json
 {
     "status": 1000,
     "message": "Oops, an error occurred!"
@@ -240,7 +240,7 @@ Views are used to calculate the performance for your offers. In every `GET /offe
 
 403 (application/json)
 
-```json
+``` json
 {
     "data": null,
     "status": null,
