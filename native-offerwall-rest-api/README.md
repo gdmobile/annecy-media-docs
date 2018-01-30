@@ -23,7 +23,7 @@ API-Version: 1.0
 GET https://api.annecy.media/offers?country=<country>&locale=<locale>&platform=<platform>&advertiser_id=<advertiser_id>&ip=<ip>&user_id=<user_id>
 ```
 
-Returns an `Array` of all active offers. The response contains static offers **and** lazy offers. Lazy offers have the additional fields `lazy<Boolean>` and `lazy_id<String>`.  Lazy offers doesn't have a valid tracking URL! You have to replace them with `fields` using `GET /offers/lazy`.
+Returns an `Array` of all active offers. The response contains static offers **and** lazy offers. Lazy offers have the additional fields `lazy<Boolean>` and `lazy_id<String>`.  Lazy offers doesn't have a valid tracking URL! You have to replace them with `fields` from `GET /offers/lazy`.
 
 #### Parameters
 
@@ -116,7 +116,7 @@ Returns an `Array` of all active lazy offers. It is possible that not all lazy o
 
 Swift Replace Example:
 
-```
+``` swift
 for lazyOffer in lazyOffers {
     for offer in offers {
         if (offer.lazy_id == lazyOffer.lazy_id) {
