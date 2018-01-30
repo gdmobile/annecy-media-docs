@@ -8,38 +8,39 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
     * [Register](https://admin.annecy.media/getting-started) or [Login](https://admin.annecy.media/login)
     * Create a **Token** in your [Publisher Settings](https://admin.annecy.media/publishers)
 
-## Get Offers
+## API
 
-Returns a list of all available and active offers for your Publisher. The response contains static offers **and** lazy offers. The lazy offers have two additional fields (`lazy<boolean>` and `lazy_id<string>`). If there are any lazy offers in the response, then you have to call the URL we've sent you in `lazy_calls` response.
+You have to set an `Authorization` and `API-Version` header to all requests. Replace `<token>` with your publisher token from your [Publisher Settings](https://admin.annecy.media/publishers). Do not hash the token!
+
+```
+Authorization: Bearer <token>
+API-Version: 1.0
+```
+
+### Get Offers
+
+```
+GET https://api.annecy.media/offers?country=<country>&locale=<locale>&platform=<platform>&advertiser_id=<advertiser_id>&ip=<ip>&user_id=<user_id>
+```
+
+Returns an `Array` of all active offers. The response contains static offers **and** lazy offers. Lazy offers have the additional fields `lazy<Boolean>` and `lazy_id<String>`. They doesn't have a valid tracking URL! You have to replace them with `fields` using `GET /offers/lazy`.
 
 #### Parameters
 
 | Parameter      | Type     | Notes |
 | -------------- | -------- | ----- |
-| country        | `string` | Country - ISO 3166 (`US`, `GB`, `DE`) |
-| locale         | `string` | Language - ISO 639-1 (`en`, `es`, `de`) |
-| platform       | `string` | Platform of the requesting device (`ios`, `android`) |
-| advertiser\_id | `string` | ID for Advertisers (IDFA, GAID) |
-| ip             | `string` | IP address of the requesting device |
-| user\_id       | `string` | User ID of your user |
-
-#### Request
-
-Replace `<Your Publisher Token>` with your token. You can create one in your [Publisher Settings](https://admin.annecy.media/publishers).
-
-```
-GET https://api.annecy.media/offers?country={country}&locale={locale}&platform={platform}&advertiser_id={advertiser_id}&ip={ip}&user_id={user_id}
-
-Headers
-    Authorization: Bearer <Your Publisher Token>
-    API-Version: 1.0
-```
+| country        | `String` | Country - ISO 3166 (`US`, `GB`, `DE`) |
+| locale         | `String` | Language - ISO 639-1 (`en`, `es`, `de`) |
+| platform       | `String` | Platform of the requesting device (`ios`, `android`) |
+| advertiser\_id | `String` | ID for Advertisers (IDFA, GAID) |
+| ip             | `String` | IP address of the requesting device |
+| user\_id       | `String` | User ID of your user |
 
 #### Response
 
-##### 200 (application/json)
+200 (application/json)
 
-```json
+``` json
 {
     "data": {
         "offers": [
@@ -79,9 +80,9 @@ Headers
 }
 ```
 
-##### 400 (application/json)
+400 (application/json)
 
-```json
+``` json
 {
     "status": 1000,
     "message": "Oops, an error occurred!"
@@ -89,9 +90,9 @@ Headers
 ```
 
 
-##### 403 (application/json)
+403 (application/json)
 
-```json
+``` json
 {
     "data": null,
     "status": null,
@@ -99,42 +100,54 @@ Headers
 }
 ```
 
-##### 500 (text/plain)
+500 (text/plain)
 
-## Get Lazy Offers
+```
 
-You can find lazy offer URLs inside the `GET /offers` response. They have to be called separately, to get your specific tracking URL. It's possible that not all lazy offers you've got from `GET /offers` are available. That's why you should hide them, until you've got the real tracking URL.
+```
 
-##### Parameters
+### Get Lazy Offers
+
+```
+GET https://api.annecy.media/offers/lazy?hash=<hash>&country=<country>&locale=<locale>&platform=<platform>&advertiser_id=<advertiser_id>&ip=<ip>&user_id=<user_id>&lazy_ids[]=<lazy_id_1>&lazy_ids[]=<lazy_id_2>
+```
+
+Returns an `Array` of all active lazy offers. It is possible that not all lazy offers you've got from `GET /offers` are available. That's why you should hide them, until you've got the real tracking URL. As soon as you have the lazy offer, replace all fields in the `tracking_url`. Search for the `search` value and replace it with the `replace` value.
+
+Swift Replace Example:
+
+```
+for lazyOffer in lazyOffers {
+    for offer in offers {
+        if (offer.lazy_id == lazyOffer.lazy_id) {
+            for field in lazyOffer.fields {
+                offer.tracking_url = offer.tracking_url.replacingOccurrences(of: field.key, with: field.value)
+            }
+
+            offer.hidden = false
+        }
+    }
+}
+```
+
+#### Parameters
 
 | Parameter      | Type     | Notes |
 | -------------- | -------- | ----- |
-| hash           | `string` | Signature hash |
-| country        | `string` | Country - ISO 3166 (`US`, `GB`, `DE`) |
-| locale         | `string` | Language - ISO 639-1 (`en`, `es`, `de`) |
-| platform       | `string` | Platform of the requesting device (`ios`, `android`) |
-| advertiser\_id | `string` | ID for Advertisers (IDFA, GAID) |
-| ip             | `string` | IP address of the requesting device |
-| user\_id       | `string` | User ID of your user |
-| lazy\_ids[]    | `string` | List of IDs from the lazy offers
-
-#### Request
-
-Replace `<Your Publisher Token>` with your token. You can create one in your [Publisher Settings](https://admin.annecy.media/publishers).
-
-```
-GET https://api.annecy.media/offers/lazy?hash={hash}&country={country}&locale={locale}&platform={platform}&advertiser_id={advertiser_id}&ip={ip}&user_id={user_id}&lazy_ids[]={lazy_id_1}&lazy_ids[]={lazy_id_2}
-
-Headers
-    Authorization: Bearer <Your Publisher Token>
-    API-Version: 1.0
-```
+| hash           | `String` | Signature hash |
+| country        | `String` | Country - ISO 3166 (`US`, `GB`, `DE`) |
+| locale         | `String` | Language - ISO 639-1 (`en`, `es`, `de`) |
+| platform       | `String` | Platform of the requesting device (`ios`, `android`) |
+| advertiser\_id | `String` | ID for Advertisers (IDFA, GAID) |
+| ip             | `String` | IP address of the requesting device |
+| user\_id       | `String` | User ID of your user |
+| lazy\_ids[]    | `String` | List of IDs from the lazy offers
 
 #### Response
 
-##### 200 (application/json)
+200 (application/json)
 
-```json
+``` json
 {
     "data": {
         "lazy_offers": [
@@ -153,18 +166,18 @@ Headers
 }
 ```
 
-##### 400 (application/json)
+400 (application/json)
 
-```json
+``` json
 {
     "status": 1000,
     "message": "Oops, an error occurred!"
 }
 ```
 
-##### 403 (application/json)
+403 (application/json)
 
-```json
+``` json
 {
     "data": null,
     "status": null,
@@ -172,54 +185,51 @@ Headers
 }
 ```
 
-##### 500 (text/plain)
+500 (text/plain)
 
-## Send Views
+```
 
-Views are used to calculate the performance for your offers. In every `GET /offers` request you receive a `request_id`. We need this id back in the body. You can only add one view per offer and `request_id`.
+```
 
-#### Request
-
-Replace `<Your Publisher Token>` with your token. You can create one in your [Publisher Settings](https://admin.annecy.media/publishers).
+### Send Views
 
 ```
 POST https://api.annecy.media/views
-
-Headers
-    Authorization: Bearer <Your Publisher Token>
-    API-Version: 1.0
-
-Body
-    {
-        "params": {
-            "locale": "de",
-            "country": "DE",
-            "platform": "ios",
-            "user_id": "b38fc80decac0523c2e690ea6311aa2f",
-            "advertiser_id": "E5BCF23E-BBEB-41CF-9971-64DC74F6E881"
-        },
-        "offers": [
-            {
-                "uuid": "123ae848-c13e-4bd3-a66a-506d93a8cb0f",
-                "view_time": "1505215643"
-            }, {
-                "uuid": "456ae848-c13e-4bd3-a66a-506d93a8cb0f",
-                "view_time": "1505215645"
-            }
-        ],
-        "request_id": "EWA1xGV"
-    }
 ```
 
-#### Response
+#### Body
 
-##### 200 (application/json)
+``` json
+{
+    "params": {
+        "locale": "de",
+        "country": "DE",
+        "platform": "ios",
+        "user_id": "b38fc80decac0523c2e690ea6311aa2f",
+        "advertiser_id": "E5BCF23E-BBEB-41CF-9971-64DC74F6E881"
+    },
+    "offers": [
+        {
+            "uuid": "123ae848-c13e-4bd3-a66a-506d93a8cb0f",
+            "view_time": "1505215643"
+        }, {
+            "uuid": "456ae848-c13e-4bd3-a66a-506d93a8cb0f",
+            "view_time": "1505215645"
+        }
+    ],
+    "request_id": "EWA1xGV"
+}
+```
+
+Views are used to calculate the performance for your offers. In every `GET /offers` request you'll get a `request_id`. Don't forget to set this ID to the body! You can only `POST` one view per offer and `request_id`.
+
+200 (application/json)
 
 ```json
 []
 ```
 
-##### 400 (application/json)
+400 (application/json)
 
 ```json
 {
@@ -228,7 +238,7 @@ Body
 }
 ```
 
-##### 403 (application/json)
+403 (application/json)
 
 ```json
 {
@@ -238,4 +248,8 @@ Body
 }
 ```
 
-##### 500 (text/plain)
+500 (text/plain)
+
+```
+
+```
