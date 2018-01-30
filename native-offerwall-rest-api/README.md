@@ -2,6 +2,12 @@
 
 Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
 
+## Checklist
+
+* You have an Annecy Media account and token
+    * [Register](https://admin.annecy.media/getting-started) or [Login](https://admin.annecy.media/login)
+    * Create a **Token** in your [Publisher Settings](https://admin.annecy.media/publishers)
+
 ## Get Offers
 
 Returns a list of all available and active offers for your Publisher. The response contains static offers **and** lazy offers. The lazy offers have two additional fields (`lazy<boolean>` and `lazy_id<string>`). If there are any lazy offers in the response, then you have to call the URL we've sent you in `lazy_calls` response.
@@ -19,11 +25,13 @@ Returns a list of all available and active offers for your Publisher. The respon
 
 #### Request
 
+Replace `<Your Publisher Token>` with your token. You can create one in your [Publisher Settings](https://admin.annecy.media/publishers).
+
 ```
 GET https://api.annecy.media/offers?country={country}&locale={locale}&platform={platform}&advertiser_id={advertiser_id}&ip={ip}&user_id={user_id}
 
 Headers
-    Authorization: Bearer 7478AF4B-649F-4843-AC3E-84CE7CC0739D
+    Authorization: Bearer <Your Publisher Token>
     API-Version: 1.0
 ```
 
@@ -112,11 +120,13 @@ You can find lazy offer URLs inside the `GET /offers` response. They have to be 
 
 #### Request
 
+Replace `<Your Publisher Token>` with your token. You can create one in your [Publisher Settings](https://admin.annecy.media/publishers).
+
 ```
 GET https://api.annecy.media/offers/lazy?hash={hash}&country={country}&locale={locale}&platform={platform}&advertiser_id={advertiser_id}&ip={ip}&user_id={user_id}&lazy_ids[]={lazy_id_1}&lazy_ids[]={lazy_id_2}
 
 Headers
-    Authorization: Bearer 7478AF4B-649F-4843-AC3E-84CE7CC0739D
+    Authorization: Bearer <Your Publisher Token>
     API-Version: 1.0
 ```
 
@@ -170,11 +180,13 @@ Views are used to calculate the performance for your offers. In every `GET /offe
 
 #### Request
 
+Replace `<Your Publisher Token>` with your token. You can create one in your [Publisher Settings](https://admin.annecy.media/publishers).
+
 ```
 POST https://api.annecy.media/views
 
 Headers
-    Authorization: Bearer 7478AF4B-649F-4843-AC3E-84CE7CC0739D
+    Authorization: Bearer <Your Publisher Token>
     API-Version: 1.0
 
 Body
