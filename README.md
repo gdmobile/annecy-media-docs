@@ -10,10 +10,10 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
   * [Android](https://github.com/gdmobile/annecy-media-api/tree/master/web-offerwall-android)
   * [Browser](https://github.com/gdmobile/annecy-media-api/tree/master/web-offerwall-browser)
 * Native Offerwall
+  * Android SDK (coming soon)
+  * [iOS SDK](https://github.com/gdmobile/annecy-media-ios-sdk)
   * [React Native SDK](https://github.com/gdmobile/react-native-annecy-media)
   * [REST API](https://github.com/gdmobile/annecy-media-api/tree/master/native-offerwall-rest-api)
-  * iOS SDK (coming soon)
-  * Android SDK (coming soon)
 
 ## Rewards
 
