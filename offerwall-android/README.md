@@ -1,4 +1,4 @@
-# Annecy Media Web Offerwall (Android)
+# Annecy Media Offerwall (Android)
 
 Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
 
