@@ -118,7 +118,7 @@ Returns an `Array` of all active offers. The response contains static offers **a
 GET https://api.annecy.media/offers/lazy?hash=<hash>&country=<country>&locale=<locale>&platform=<platform>&advertiser_id=<advertiser_id>&ip=<ip>&user_id=<user_id>&lazy_ids[]=<lazy_id_1>&lazy_ids[]=<lazy_id_2>
 ```
 
-Returns an `Array` of all active lazy offers. It is possible that not all lazy offers you've got from `GET /offers` are available. That's why you should hide them, until you've got the real tracking URL. As soon as you have the lazy offer, replace all fields in the `tracking_url`. Search for the `search` value and replace it with the `replace` value.
+Returns an `Array` of all active lazy offers. It is possible that not all lazy offers you've got from `GET /offers` are available. That's why you should hide them, until you've got the real tracking URL. As soon as you have the lazy offer, replace all placeholder `field`s in the offer. Search for the `search` value and replace it with the `replace` value.
 
 Node.js Replace Example:
 
