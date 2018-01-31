@@ -1,4 +1,4 @@
-# Annecy Rewards (PHP)
+# Annecy Media Rewards (PHP)
 
 Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
 
