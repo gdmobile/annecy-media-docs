@@ -1,4 +1,4 @@
-# Annecy Web Offerwall (iOS Swift)
+# Annecy Media Web Offerwall (iOS Swift)
 
 Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
 
