@@ -1,4 +1,4 @@
-# Annecy Native Offerwall (REST API)
+# Annecy Media Offerwall REST API
 
 Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
 
