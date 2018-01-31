@@ -120,20 +120,20 @@ GET https://api.annecy.media/offers/lazy?hash=<hash>&country=<country>&locale=<l
 
 Returns an `Array` of all active lazy offers. It is possible that not all lazy offers you've got from `GET /offers` are available. That's why you should hide them, until you've got the real tracking URL. As soon as you have the lazy offer, replace all fields in the `tracking_url`. Search for the `search` value and replace it with the `replace` value.
 
-Swift Replace Example:
+Node.js Replace Example:
 
-``` swift
-for lazyOffer in lazyOffers {
-    for offer in offers {
-        if (offer.lazy_id == lazyOffer.lazy_id) {
-            for field in lazyOffer.fields {
-                offer.tracking_url = offer.tracking_url.replacingOccurrences(of: field.key, with: field.value)
-            }
+``` javascript
+lazyOffers.forEach((lazyOffer) => {
+    offers.forEach((offer) => {
+        if (offer.lazy_id === lazyOffer.lazy_id) {
+            lazyOffer.fields.forEach((field) => {
+                offer[field.field] = offer[field.field].replace(field.key, field.value);
+            });
 
-            offer.hidden = false
+            offer.hidden = false;
         }
-    }
-}
+    });
+});
 ```
 
 #### Parameters
