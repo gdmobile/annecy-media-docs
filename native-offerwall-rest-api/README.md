@@ -127,7 +127,7 @@ lazyOffers.forEach((lazyOffer) => {
     offers.forEach((offer) => {
         if (offer.lazy_id === lazyOffer.lazy_id) {
             lazyOffer.fields.forEach((field) => {
-                offer[field.field] = offer[field.field].replace(field.key, field.value);
+                offer[field.field] = offer[field.field].replace(field.search, field.replace);
             });
 
             offer.hidden = false;
