@@ -3,6 +3,7 @@
 Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
 
 * [Checklist](#checklist)
+* [Sample](#sample)
 * [API](#api)
     * [Offers](#get-offers)
     * [Lazy Offers](#get-lazy-offers)
@@ -13,6 +14,10 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
 * You have an Annecy Media account and token
     * [Register](https://admin.annecy.media/getting-started) or [Login](https://admin.annecy.media/login)
     * Create a **Token** in your [Publisher Settings](https://admin.annecy.media/publishers)
+
+## Sample
+
+Check out our [iOS Sample Project](https://github.com/gdmobile/annecy-media-docs/tree/master/offerwall-rest-api/sample)!
 
 ## API
 

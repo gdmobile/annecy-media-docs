@@ -4,7 +4,7 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
 
 ## Sample
 
-Check out our [Sample Project](https://github.com/gdmobile/annecy-media-api/tree/master/rewards-php/sample/reward.php)!
+Check out our [Sample Project](https://github.com/gdmobile/annecy-media-docs/tree/master/rewards-php/sample/reward.php)!
 
 ## PHP Example
 
