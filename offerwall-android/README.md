@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         // Support mixed images
         // https://stackoverflow.com/a/32875064/1484222
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            mAnnecyWebView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+            mAnnecyWebView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE);
         }
 
         mAnnecyWebView.loadUrl("https://offerwall.annecy.media?country=" + country + "&language=" + language + "&idfa_gaid=" + googleAdvertisingID + "&token=" + TOKEN + "&user_id=" + USER_ID + "&platform=android");
