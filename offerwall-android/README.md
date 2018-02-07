@@ -11,17 +11,19 @@ Check out our [Sample Project](https://github.com/gdmobile/annecy-media-docs/tre
 You can get your custom web offerwall URL [here](https://admin.annecy.media/offerwall). Create a WebView and make sure that clicked offers will open in default browser!
 
 ``` java
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
-import android.annotation.TargetApi;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -69,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // Support mixed images
+        // https://stackoverflow.com/a/32875064/1484222
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            mAnnecyWebView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+        }
 
         mAnnecyWebView.loadUrl("https://offerwall.annecy.media?country=" + country + "&language=" + language + "&idfa_gaid=" + googleAdvertisingID + "&token=" + TOKEN + "&user_id=" + USER_ID + "&platform=android");
         setContentView(mAnnecyWebView);
