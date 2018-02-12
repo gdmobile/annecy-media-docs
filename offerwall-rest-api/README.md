@@ -1,5 +1,7 @@
 # Annecy Media Offerwall (REST API)
 
+[![API-Version](https://img.shields.io/badge/API--Version-1.0-green.svg)](https://github.com/gdmobile/annecy-media-docs)
+
 Use our [API docs](https://admin.annecy.media/docs) for an awesome integration experience!
 
 * [Checklist](#checklist)
