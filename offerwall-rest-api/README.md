@@ -38,14 +38,14 @@ Returns an `Array` of all active offers. The response contains static offers **a
 
 #### Parameters
 
-| Parameter      | Type     | Notes |
-| -------------- | -------- | ----- |
-| country        | `String` | Country - ISO 3166 (`US`, `GB`, `DE`) |
-| locale         | `String` | Language - ISO 639-1 (`en`, `es`, `de`) |
-| platform       | `String` | Platform of the requesting device (`ios`, `android`) |
-| advertiser\_id | `String` | ID for Advertisers (IDFA, GAID) |
-| ip             | `String` | IP address of the requesting device |
-| user\_id       | `String` | User ID of your user |
+| Parameter      | Type     | Nullable | Notes |
+| -------------- | -------- | -------- | ------|
+| platform       | `String` | `false`  | Platform of the requesting device (`ios`, `android`) |
+| country        | `String` | `false`  | Country - ISO 3166 (`US`, `GB`, `DE`) |
+| locale         | `String` | `true`   | Language - ISO 639-1 (`en`, `es`, `de`) |
+| advertiser\_id | `String` | `true`   | ID for Advertisers (IDFA, GAID) |
+| ip             | `String` | `true`   | IP address of the requesting device |
+| user\_id       | `String` | `true`   | User ID of your user |
 
 #### Response
 
