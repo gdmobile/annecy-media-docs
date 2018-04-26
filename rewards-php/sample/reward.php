@@ -34,8 +34,8 @@ if ($hashed_signature == $signature) {
     // This request is valid.
     // Tell the user that she/he got credits!
     // Store click ID and campaign title to validate with Annecy later.
-	$click_id = $query_params["click_id"];
-	$campaign_title = $query_params["campaign_title"];
+    $click_id = $query_params["click_id"];
+    $campaign_title = $query_params["campaign_title"];
 
     header("HTTP/1.1 200 OK");
 } else {
