@@ -30,6 +30,7 @@ parse_str($query_string, $query_params);
     "user_id" => "foo",
     "credits" => "100",
     "campaign_title" => "bar",
+    "click_id" => "baz",
     "signature" => "218b99be4bb589a6a200e94ac26afee620fe83d6"
 ]
 ```
@@ -46,7 +47,7 @@ $query_string = http_build_query($query_params);
 `$query_string` will now look like this:
 
 ``` php
-"campaign_title=bar&credits=100&user_id=foo"
+"campaign_title=bar&click_id=baz&credits=100&user_id=foo"
 ```
 
 Then we have to hash the `$query_string` with your secret. If the result is the same like signature, then it's a valid reward:
