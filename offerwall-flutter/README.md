@@ -10,7 +10,7 @@ Check out our [Sample Project](https://github.com/gdmobile/annecy-media-docs/tre
 
 Add **flutter_webview_plugin** and **url_launcher** to your package's **pubspec.yaml** file.
 
-```
+``` yaml
 dependencies:
   flutter_webview_plugin: "^0.1.6"
   url_launcher: "^3.0.2"
@@ -18,7 +18,7 @@ dependencies:
 
 install packages from the command line.
 
-```
+``` bash
 $ flutter packages get
 ```
 
