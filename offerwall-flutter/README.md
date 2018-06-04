@@ -4,7 +4,7 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
 
 ## Sample
 
-Check out our [Sample Project](https://github.com/gdmobile/annecy-media-docs/tree/master/offerwall-flutter/sample/index.html)!
+Check out our [Sample Project](https://github.com/gdmobile/annecy-media-docs/tree/master/offerwall-flutter/sample)!
 
 ## Example
 
