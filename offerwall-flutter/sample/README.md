@@ -1,8 +1,13 @@
-# sample
+# Annecy Media Sample
 
-A new Flutter project.
+show devices
 
-## Getting Started
+``` bash
+flutter doctor -v
+```
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+run on device
+
+``` bash
+flutter run -d {DEVICE_ID}
+```
