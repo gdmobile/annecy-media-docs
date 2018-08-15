@@ -30,6 +30,12 @@ You have to set an `Authorization` and `API-Version` header to all requests. Rep
 | Authorization | `Bearer <token>` |
 | API-Version   | `1.0`            |
 
+It's also possible to send the token via `GET` parameter, e.g.
+
+```
+GET https://api.annecy.media/offers?token=<token>
+```
+
 ### Get Offers
 
 ```
