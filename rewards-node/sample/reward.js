@@ -9,7 +9,7 @@ const SIGNATURE_QUERY_NAME = 'signature';
 const HASH_ALGORITHM = 'sha1';
 
 // The params are decoded with PHP.
-// That's why you have to use this special encoder.
+// That's why you have to use this special URL encoder.
 //
 // Source: https://github.com/kvz/locutus/blob/master/src/php/url/urlencode.js
 function urlencode(str) {
@@ -50,7 +50,7 @@ const signature = hmac.update(queryString).digest('hex');
 
 // Check if the hashed signature is euqual to query signature.
 if (signature === queryParams[SIGNATURE_QUERY_NAME]) {
-    // Set response with 200 header.
+    // Set response with HTTP status 200.
 } else {
-    // Set response with 403 header.
+    // Set response with HTTP status 403.
 }
