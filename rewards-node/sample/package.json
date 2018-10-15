@@ -1,0 +1,14 @@
+{
+  "name": "annecy-sec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "reward.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tobias Schultka",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1"
+  }
+}

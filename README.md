@@ -14,3 +14,4 @@ Use our [API docs](https://admin.annecy.media/docs) for an awesome integration e
 ## Rewards
 
 * [PHP](https://github.com/gdmobile/annecy-media-docs/tree/master/rewards-php)
+* [PHP](https://github.com/gdmobile/annecy-media-docs/tree/master/rewards-node)
