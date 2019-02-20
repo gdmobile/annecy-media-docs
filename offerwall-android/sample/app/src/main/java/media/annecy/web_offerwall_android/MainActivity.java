@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Get user settings
         String language = Locale.getDefault().getLanguage();
-        String country = Locale.getDefault().getCountry();
+        String country = "DE";
         String googleAdvertisingID = "bar";
 
         // Create an Annecy WebWiew
